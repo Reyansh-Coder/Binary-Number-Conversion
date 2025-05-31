@@ -1,9 +1,9 @@
 # Converting A Decimal to Binary Number
 
-# Input from user
+# Taking Input from User
 decimal = int(input("Enter a decimal number: "))
 
-# Storing binary digits
+# Storing Binary Digits
 binary = ""
 
 # Outer loop 
