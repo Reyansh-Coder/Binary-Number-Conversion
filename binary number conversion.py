@@ -1,23 +1,23 @@
-# Decimal to Binary using nested loop
+# Converting A Decimal to Binary Number
 
 # Input from user
 decimal = int(input("Enter a decimal number: "))
 
-# Store binary digits
+# Storing binary digits
 binary = ""
 
-# Outer loop (only runs once, for demonstration of nesting)
+# Outer loop 
 for i in range(1):  
     num = decimal
 
-    # Inner loop to convert to binary
+    # Inner Loop 
     while num > 0:
         remainder = num % 2
         binary = str(remainder) + binary
         num = num // 2
 
-# If input was 0
+# If Input = 0 
 if decimal == 0:
     binary = "0"
 
-print("Binary number:", binary)
+print("Binary Number:", binary)
