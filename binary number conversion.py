@@ -1,23 +1,23 @@
-# Convert a decimal number to binary using simple nested loops
+# Decimal to Binary using nested loop
 
+# Input from user
 decimal = int(input("Enter a decimal number: "))
 
-# Find the highest power of 2 less than or equal to decimal
-power = 0
-while 2 ** power <= decimal:
-    power += 1
-power -= 1
-
+# Store binary digits
 binary = ""
-for i in range(power, -1, -1):
-    bit = 0
-    temp = decimal
-    # Nested loop to check if 2^i fits into the remaining number
-    while temp >= 2 ** i:
-        temp -= 2 ** i
-        bit += 1
-    binary += str(bit)
-    decimal -= bit * (2 ** i)
 
-print("Binary representation:", binary)
+# Outer loop (only runs once, for demonstration of nesting)
+for i in range(1):  
+    num = decimal
 
+    # Inner loop to convert to binary
+    while num > 0:
+        remainder = num % 2
+        binary = str(remainder) + binary
+        num = num // 2
+
+# If input was 0
+if decimal == 0:
+    binary = "0"
+
+print("Binary number:", binary)
